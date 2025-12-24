@@ -103,7 +103,7 @@ Untuk CNN Base digunakan normalisasi rescale 1/255, sedangkan pada model transfe
 
 ## Hasil Evaluasi dan Analisis Perbandingan
 
-### 📊 Tabel Perbandingan Performa Model
+
 
 ### 📊 Tabel Perbandingan Performa Model
 
@@ -177,43 +177,3 @@ pip install -r requirements.txt
 streamlit run app.py
 
 ---
-
-## 📂 Struktur Repository
-
-vegetable-classification/
-│
-├── assets/ # Gambar dokumentasi & visualisasi
-│ ├── cover.jpg # Gambar utama proyek
-│ ├── acc_cnn_base.png # Plot akurasi CNN Base
-│ ├── acc_mobilenetv2.png # Plot akurasi MobileNetV2
-│ ├── acc_efficientnet.png # Plot akurasi EfficientNet
-│ ├── Confusion Matrix-CNN Base.png
-│ ├── Confusion Matrix-MobileNetV2.png
-│ └── Confusion Matrix-Efficientnet.png
-│
-├── model_artifacts/ # Model hasil training & artefak
-│ ├── cnn_base.keras
-│ ├── mobilenet.keras
-│ ├── efficientnet.keras
-│ ├── class_indices.json
-│ ├── CNN_Base_history.png
-│ ├── MobileNetV2_history.png
-│ └── EfficientNet_history.png
-│
-├── app.py # Aplikasi Streamlit
-├── requirements.txt # Daftar dependency Python
-├── dataset_uap.zip # Dataset (opsional)
-├── .gitignore
-└── README.md
-
----
-## 🧾 Kesimpulan
-
-Berdasarkan hasil eksperimen dan evaluasi yang telah dilakukan, dapat disimpulkan bahwa:
-
-- Model **CNN Base** sebagai model non-pretrained mampu memberikan performa yang cukup baik sebagai baseline dengan akurasi sebesar **83.61%**, namun masih memiliki keterbatasan dalam menangkap fitur kompleks pada citra.
-- Model **MobileNetV2** dengan pendekatan **transfer learning** menunjukkan peningkatan performa yang signifikan dengan akurasi **93.84%**, serta lebih efisien secara komputasi sehingga cocok untuk aplikasi real-time.
-- Model **EfficientNet** menghasilkan performa terbaik dengan akurasi tertinggi sebesar **95.27%**, serta memiliki kemampuan generalisasi yang lebih stabil dalam membedakan sayuran segar dan busuk.
-
-Hasil ini membuktikan bahwa penggunaan **transfer learning** mampu meningkatkan performa klasifikasi citra secara signifikan dibandingkan CNN yang dilatih dari awal.  
-Berdasarkan hasil perbandingan, **EfficientNet** direkomendasikan sebagai model terbaik untuk sistem klasifikasi jenis sayuran berbasis citra pada proyek ini.

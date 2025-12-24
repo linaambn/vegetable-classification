@@ -1,7 +1,7 @@
 # 🥦 Vegetable Classification using Deep Learning
 
 <p align="center">
-  <img src="assets/cover.jpg" width="500">
+  <img src="assets/cover.jpg" width="400">
 </p>
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
@@ -21,8 +21,7 @@
 - [Confusion Matrix](#confusion-matrix)
 - [Implementasi Sistem Website](#implementasi-sistem-website)
 - [Panduan Menjalankan Sistem Secara Lokal](#panduan-menjalankan-sistem-secara-lokal)
-- [Struktur Repository](#struktur-repository)
-- [Kesimpulan](#kesimpulan)
+
 
 ---
 
@@ -40,11 +39,19 @@ Hasil dari proyek ini diharapkan dapat memberikan gambaran mengenai efektivitas 
 
 ## Dataset
 Dataset berupa citra sayuran dengan 10 kelas berbeda: 
-5 kelas Fresh:
-FreshBellpepper, FreshCarrot, FreshCucumber, FreshPotato, FreshTomato
+**5 kelas Fresh:**
+- FreshBellpepper  
+- FreshCarrot  
+- FreshCucumber  
+- FreshPotato  
+- FreshTomato  
 
-5 kelas Rotten:
-RottenBellpepper, RottenCarrot, RottenCucumber, RottenPotato, RottenTomato
+**5 kelas Rotten:**
+- RottenBellpepper  
+- RottenCarrot  
+- RottenCucumber  
+- RottenPotato  
+- RottenTomato 
 
 📌 **Sumber Dataset**  
 https://www.kaggle.com/datasets/muhriddinmuxiddinov/fruits-and-vegetables-dataset
@@ -145,27 +152,50 @@ Hasil ini menunjukkan bahwa penggunaan transfer learning secara signifikan menin
 
 ### CNN Base
 <p align="center">
-  <img src="assets/Confusion Matrix-CNN Base.png" width="600">
+  <img src="assets/Confusion Matrix-CNN Base.png" width="500">
 </p>
 
 ### MobileNetV2
 <p align="center">
-  <img src="assets/Confusion Matrix-MobileNetV2.png" width="600">
+  <img src="assets/Confusion Matrix-MobileNetV2.png" width="500">
 </p>
 
 ### EfficientNet
 <p align="center">
-  <img src="assets/Confusion Matrix-Efficientnet.png" width="600">
+  <img src="assets/Confusion Matrix-Efficientnet.png" width="500">
 </p>
 
 ---
 
 ## Implementasi Sistem Website
-Aplikasi web dikembangkan menggunakan **Streamlit**, memungkinkan pengguna:
-- Upload gambar sayuran
-- Melihat hasil klasifikasi
-- Menampilkan confidence score
 
+Aplikasi web dikembangkan menggunakan Streamlit sebagai antarmuka interaktif untuk mengintegrasikan model deep learning ke dalam sistem yang mudah digunakan oleh pengguna. Aplikasi ini memungkinkan proses klasifikasi citra sayuran secara real-time dengan memanfaatkan model CNN yang telah dilatih sebelumnya.
+
+Fitur utama yang tersedia pada aplikasi website ini meliputi:
+
+Upload gambar sayuran dalam format JPG atau PNG
+
+Menampilkan hasil klasifikasi berupa nama kelas sayuran (Fresh atau Rotten)
+
+Menampilkan confidence score sebagai tingkat keyakinan model terhadap hasil prediksi
+
+Validasi input gambar untuk memastikan format dan ukuran file sesuai
+
+Tampilan antarmuka sederhana dan responsif sehingga mudah digunakan oleh pengguna umum
+
+Alur kerja sistem website adalah sebagai berikut:
+
+Pengguna mengunggah citra sayuran melalui halaman aplikasi.
+
+Sistem melakukan preprocessing citra (resize dan normalisasi) sesuai dengan kebutuhan model.
+
+Citra yang telah diproses dimasukkan ke dalam model CNN yang dipilih.
+
+Model menghasilkan prediksi kelas beserta nilai confidence score.
+
+Hasil klasifikasi ditampilkan langsung pada halaman aplikasi.
+
+Implementasi aplikasi berbasis Streamlit ini memungkinkan model deep learning yang telah dikembangkan untuk digunakan secara praktis, serta menunjukkan bagaimana sistem klasifikasi citra dapat diintegrasikan ke dalam aplikasi web yang interaktif dan mudah diakses.
 ---
 
 ## Panduan Menjalankan Sistem Secara Lokal
@@ -176,4 +206,4 @@ cd vegetable-classification
 pip install -r requirements.txt
 streamlit run app.py
 
----
+

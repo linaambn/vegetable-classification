@@ -39,6 +39,7 @@ Hasil dari proyek ini diharapkan dapat memberikan gambaran mengenai efektivitas 
 
 ## Dataset
 Dataset berupa citra sayuran dengan 10 kelas berbeda: 
+
 **5 kelas Fresh:**
 - FreshBellpepper  
 - FreshCarrot  

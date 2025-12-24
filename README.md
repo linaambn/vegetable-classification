@@ -169,33 +169,26 @@ Hasil ini menunjukkan bahwa penggunaan transfer learning secara signifikan menin
 
 ## Implementasi Sistem Website
 
-Aplikasi web dikembangkan menggunakan Streamlit sebagai antarmuka interaktif untuk mengintegrasikan model deep learning ke dalam sistem yang mudah digunakan oleh pengguna. Aplikasi ini memungkinkan proses klasifikasi citra sayuran secara real-time dengan memanfaatkan model CNN yang telah dilatih sebelumnya.
+Aplikasi web dikembangkan menggunakan **Streamlit** sebagai antarmuka interaktif untuk mengintegrasikan model deep learning ke dalam sistem yang mudah digunakan oleh pengguna. Aplikasi ini memungkinkan proses klasifikasi citra sayuran secara **real-time** dengan memanfaatkan model CNN yang telah dilatih sebelumnya.
 
+### Fitur Utama
 Fitur utama yang tersedia pada aplikasi website ini meliputi:
+- **Upload gambar sayuran** dalam format JPG atau PNG
+- **Menampilkan hasil klasifikasi** berupa nama kelas sayuran (Fresh atau Rotten)
+- **Menampilkan confidence score** sebagai tingkat keyakinan model terhadap hasil prediksi
+- **Validasi input gambar** untuk memastikan format dan ukuran file sesuai
+- **Tampilan antarmuka sederhana dan responsif** sehingga mudah digunakan oleh pengguna umum
 
-Upload gambar sayuran dalam format JPG atau PNG
-
-Menampilkan hasil klasifikasi berupa nama kelas sayuran (Fresh atau Rotten)
-
-Menampilkan confidence score sebagai tingkat keyakinan model terhadap hasil prediksi
-
-Validasi input gambar untuk memastikan format dan ukuran file sesuai
-
-Tampilan antarmuka sederhana dan responsif sehingga mudah digunakan oleh pengguna umum
-
+### Alur Kerja Sistem
 Alur kerja sistem website adalah sebagai berikut:
-
-Pengguna mengunggah citra sayuran melalui halaman aplikasi.
-
-Sistem melakukan preprocessing citra (resize dan normalisasi) sesuai dengan kebutuhan model.
-
-Citra yang telah diproses dimasukkan ke dalam model CNN yang dipilih.
-
-Model menghasilkan prediksi kelas beserta nilai confidence score.
-
-Hasil klasifikasi ditampilkan langsung pada halaman aplikasi.
+1. Pengguna mengunggah citra sayuran melalui halaman aplikasi.
+2. Sistem melakukan preprocessing citra (resize dan normalisasi) sesuai dengan kebutuhan model.
+3. Citra yang telah diproses dimasukkan ke dalam model CNN yang dipilih.
+4. Model menghasilkan prediksi kelas beserta nilai confidence score.
+5. Hasil klasifikasi ditampilkan langsung pada halaman aplikasi.
 
 Implementasi aplikasi berbasis Streamlit ini memungkinkan model deep learning yang telah dikembangkan untuk digunakan secara praktis, serta menunjukkan bagaimana sistem klasifikasi citra dapat diintegrasikan ke dalam aplikasi web yang interaktif dan mudah diakses.
+
 ---
 
 ## Panduan Menjalankan Sistem Secara Lokal
